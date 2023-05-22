@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section{
+    padding: 2% 0;
+}
+button{
+    text-transform: uppercase;
+}
+.btnSearch button{
+    width: 40%;
+}
+.categouryPrice span{
+    background-color: #DC3545;
+}
+.categouryPrice span::before{
+    content: 'Total:';
+}
+th,td{
+    text-transform: uppercase;
+}
+.delete-overlay{   
+    width: 40%;
+    background: #fff;
+    position: fixed;
+    margin: auto;
+    height: 300px;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 5px brown;
+
+}

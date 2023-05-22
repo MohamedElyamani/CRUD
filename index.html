@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <section>
+        <div class="crud">
+            <div class="container">
+                <div class="crudTitle text-center text-uppercase mb-4">
+                    <h1>crud store managment system</h1>
+                    <h5>creat read update delete</h5>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="categouryName mb-3 forClr">
+                            <input type="text" placeholder="Product Name" class="form-control py-2" id="name">
+                        </div>
+                    </div>
+
+                    <div class="categouryPrice d-flex align-items-center mb-3 forClr">
+                        <input type="number" placeholder="Price" class="form-control me-2 py-2" id="price">
+                        <input type="number" placeholder="TAX" class="form-control me-2 py-2" id="tax">
+                        <input type="number" placeholder="ADS" class="form-control me-2 py-2" id="ads">
+                        <input type="number" placeholder="Descount" class="form-control me-2 py-2" id="descount">
+                        <span class="text-light py-2 px-1 rounded-1" id="totlaPrice"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="categouryCount mb-3 forClr">
+                            <input type="number" placeholder="Product Count" class="form-control py-2" id="count">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="categouryType mb-3 forClr">
+                            <input type="text" placeholder="Product Categoury" class="form-control py-2" id="categoury">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <button class="submit btn btn-primary mb-3 w-100">create</button>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="categourySearch mb-3">
+                            <input type="text" placeholder="Search" class="form-control py-2"  id="search">
+                        </div>
+                    </div>
+
+                    <div class="btnSearch d-flex justify-content-between">
+                        <button class="btn btn-primary mb-3" onclick="getSearchMood(this.id)" id="searchByName">Search By Name</button>
+                        <button class="btn btn-primary mb-3" onclick="getSearchMood(this.id)" id="searchByCategoury">Search By Categoury</button>
+                    </div>
+                    
+
+                    <table class="text-center w-100 mt-4 table">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>name</th>
+                                <th>price</th>
+                                <th>tax</th>
+                                <th>ads</th>
+                                <th>descount</th>
+                                <th>total</th>
+                                <th>categoury</th>
+                                <th>update</th>
+                                <th>delet</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="deleteOverlay" class="delete-overlay d-none justify-content-center align-items-center flex-column">
+            <h3>Are you sure?</h3>
+            <div class="checkButton">
+                <button class="btn btn-primary" id='yesDelete'>Yes</button>
+                <button class="btn btn-primary" id='noDelete'>No</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script src="js.js"></script>
+</body>
+</html>
